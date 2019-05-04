@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    .container
+        h2.text-center= status
+        p.text-center #{message}!!!
+    if(locals.settings.env === "development")
+        pre.error!= stackHighlighted

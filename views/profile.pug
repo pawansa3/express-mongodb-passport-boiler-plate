@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    .container
+        if(user)
+            .media
+                .media-left
+                    img.media-object(src=`${user.gravatar}&d=retro`, alt=`${user.name}`, style="width:100px") 
+                .media-body
+                    h2.media-heading= user.name
+                    h3= user.email
